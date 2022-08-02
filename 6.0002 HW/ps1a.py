@@ -11,6 +11,8 @@ import time
 # Part A: Transporting Space Cows
 #================================
 
+cow_file = "ps1_cow_data.txt"
+
 # Problem 1
 def load_cows(filename):
     """
@@ -57,7 +59,14 @@ def greedy_cow_transport(cows,limit=10):
     transported on a particular trip and the overall list containing all the
     trips
     """
-    cows = load_cows("ps1_cow_data.txt")
+    cows = load_cows(cow_file);
+    copy_cows = cows;
+    for cow in copy_cows:
+        print(cow);
+    
+            
+greedy_cow_transport(cows=load_cows(cow_file), limit= 10)
+# print(greedy_cow_transport(cows=load_cows(r"C:\Users\aznge\Documents\MIT OCW\6.0002 HW\ps1_cow_data.txt"), limit = 10))
 
 # Problem 3
 def brute_force_cow_transport(cows,limit=10):
